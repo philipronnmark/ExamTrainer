@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamTrainer
 {
-    class Exam
+   class Exam
     {
         private ArrayList examQuestions = new ArrayList();
 
@@ -26,6 +26,11 @@ namespace ExamTrainer
         public int getNumOfQuestions()
         {
             return examQuestions.Count;
+        }
+
+        public ArrayList getQuestions()
+        {
+            return examQuestions;
         }
 
         public void addQuestion(ExamQuestion q)

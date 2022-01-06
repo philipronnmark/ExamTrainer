@@ -12,16 +12,41 @@ namespace ExamTrainer
 {
     public partial class QuestionForm : Form
     {
-        public 
+        private Exam exam;
+        private ExamQuestion eq;
 
-        public QuestionForm(Exam exam)
-        {
 
+        public QuestionForm()
+        { 
             InitializeComponent();
-            this.exam = exam;
+            
+            //lblExamOnCreate.Text = exam.getExamName();
         }
 
+        public QuestionForm(object chosenExam) : this()
+        {
+            this.exam = (Exam)chosenExam;
+            lblExamOnCreate.Text = exam.getExamName();
+        }
 
+        private void refreshExamQuestions()
+        {
+            lboxQuestions.Items.Clear();
+            foreach(ExamQuestion eq in exam.getQuestions())
+            {
+                lboxQuestions.Items.Add(eq);
 
+            }
+        }
+
+        internal void SetExam(Exam e)
+        {
+            exam = e;
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

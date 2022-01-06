@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExamTrainer
 {
-    class ExamQuestion
+    enum ABCD
     {
-        private string question;
-        private string answer;
-
-
+        A,
+        B,
+        C,
+        D
+        
     }
 }

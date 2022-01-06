@@ -44,8 +44,9 @@ namespace ExamTrainer
 
         private void btnEditExam_Click(object sender, EventArgs e)
         {
-            QuestionForm qForm = new QuestionForm();
-            qForm.exam
+            QuestionForm qForm = new QuestionForm((Exam)lboxExams.SelectedItem);
+            //qForm.SetExam((Exam)lboxExams.SelectedItem);
+            qForm.Show();
             
         }
     }
