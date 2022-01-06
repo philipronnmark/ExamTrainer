@@ -29,22 +29,23 @@
         private void InitializeComponent()
         {
             this.lblExamOnCreate = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuestion = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cboxAnswer = new System.Windows.Forms.ComboBox();
+            this.txtA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lboxQuestions = new System.Windows.Forms.ListBox();
+            this.btnSaveQuestion = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,28 +58,28 @@
             this.lblExamOnCreate.TabIndex = 0;
             this.lblExamOnCreate.Text = "examBeingCrated";
             // 
-            // textBox1
+            // txtQuestion
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(315, 57);
-            this.textBox1.TabIndex = 4;
+            this.txtQuestion.Location = new System.Drawing.Point(10, 19);
+            this.txtQuestion.Multiline = true;
+            this.txtQuestion.Name = "txtQuestion";
+            this.txtQuestion.Size = new System.Drawing.Size(315, 57);
+            this.txtQuestion.TabIndex = 4;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtD);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtC);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtB);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.cboxAnswer);
+            this.groupBox1.Controls.Add(this.txtA);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtQuestion);
             this.groupBox1.Location = new System.Drawing.Point(22, 302);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(509, 224);
@@ -95,12 +96,12 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "D";
             // 
-            // textBox5
+            // txtD
             // 
-            this.textBox5.Location = new System.Drawing.Point(222, 182);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 20);
-            this.textBox5.TabIndex = 14;
+            this.txtD.Location = new System.Drawing.Point(222, 182);
+            this.txtD.Name = "txtD";
+            this.txtD.Size = new System.Drawing.Size(158, 20);
+            this.txtD.TabIndex = 14;
             // 
             // label6
             // 
@@ -111,12 +112,12 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "C";
             // 
-            // textBox4
+            // txtC
             // 
-            this.textBox4.Location = new System.Drawing.Point(222, 119);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtC.Location = new System.Drawing.Point(222, 119);
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(158, 20);
+            this.txtC.TabIndex = 12;
             // 
             // label5
             // 
@@ -127,12 +128,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "B";
             // 
-            // textBox3
+            // txtB
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtB.Location = new System.Drawing.Point(23, 179);
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(158, 20);
+            this.txtB.TabIndex = 10;
             // 
             // label4
             // 
@@ -152,20 +153,20 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Correct answer";
             // 
-            // comboBox1
+            // cboxAnswer
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(362, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cboxAnswer.FormattingEnabled = true;
+            this.cboxAnswer.Location = new System.Drawing.Point(362, 33);
+            this.cboxAnswer.Name = "cboxAnswer";
+            this.cboxAnswer.Size = new System.Drawing.Size(121, 21);
+            this.cboxAnswer.TabIndex = 7;
             // 
-            // textBox2
+            // txtA
             // 
-            this.textBox2.Location = new System.Drawing.Point(23, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtA.Location = new System.Drawing.Point(23, 119);
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(158, 20);
+            this.txtA.TabIndex = 6;
             // 
             // label2
             // 
@@ -202,12 +203,24 @@
             this.lboxQuestions.Name = "lboxQuestions";
             this.lboxQuestions.Size = new System.Drawing.Size(279, 251);
             this.lboxQuestions.TabIndex = 9;
+            this.lboxQuestions.SelectedIndexChanged += new System.EventHandler(this.lboxQuestions_SelectedIndexChanged);
+            // 
+            // btnSaveQuestion
+            // 
+            this.btnSaveQuestion.Location = new System.Drawing.Point(345, 74);
+            this.btnSaveQuestion.Name = "btnSaveQuestion";
+            this.btnSaveQuestion.Size = new System.Drawing.Size(117, 23);
+            this.btnSaveQuestion.TabIndex = 10;
+            this.btnSaveQuestion.Text = "Save Question";
+            this.btnSaveQuestion.UseVisualStyleBackColor = true;
+            this.btnSaveQuestion.Click += new System.EventHandler(this.btnSaveQuestion_Click);
             // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 607);
+            this.Controls.Add(this.btnSaveQuestion);
             this.Controls.Add(this.lboxQuestions);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAddQuestion);
@@ -225,21 +238,22 @@
         #endregion
 
         private System.Windows.Forms.Label lblExamOnCreate;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuestion;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtD;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cboxAnswer;
+        private System.Windows.Forms.TextBox txtA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddQuestion;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox lboxQuestions;
+        private System.Windows.Forms.Button btnSaveQuestion;
     }
 }
