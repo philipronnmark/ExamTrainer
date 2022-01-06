@@ -23,6 +23,7 @@ namespace ExamTrainer
             Exam exam = new Exam();
             exam.setExamName(txtExamName.Text);
             examManager.addExam(exam);
+            txtExamName.Text = "";
 
 
             refreshExamList();
@@ -46,8 +47,30 @@ namespace ExamTrainer
         {
             QuestionForm qForm = new QuestionForm((Exam)lboxExams.SelectedItem);
             //qForm.SetExam((Exam)lboxExams.SelectedItem);
-            qForm.Show();
+            qForm.ShowDialog();
+            refreshExamList();
             
+        }
+
+        private void btnPlayExam_Click(object sender, EventArgs e)
+        {
+            if(lboxExams.SelectedItem != null)
+            {
+                Exam ex = (Exam)lboxExams.SelectedItem;
+                if (ex.getNumOfQuestions() > 0)
+                {
+                    ExamPlayerForm epForm = new ExamPlayerForm((Exam)lboxExams.SelectedItem);
+                    epForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No questions in this exam");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select an exam");
+            }
         }
     }
 }

@@ -43,9 +43,9 @@
             this.txtA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddQuestion = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFinishExam = new System.Windows.Forms.Button();
             this.lboxQuestions = new System.Windows.Forms.ListBox();
-            this.btnSaveQuestion = new System.Windows.Forms.Button();
+            this.btnDeleteQuestion = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtD);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.btnAddQuestion);
             this.groupBox1.Controls.Add(this.txtC);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtB);
@@ -82,7 +83,7 @@
             this.groupBox1.Controls.Add(this.txtQuestion);
             this.groupBox1.Location = new System.Drawing.Point(22, 302);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(509, 224);
+            this.groupBox1.Size = new System.Drawing.Size(509, 268);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Question";
@@ -179,7 +180,7 @@
             // 
             // btnAddQuestion
             // 
-            this.btnAddQuestion.Location = new System.Drawing.Point(345, 35);
+            this.btnAddQuestion.Location = new System.Drawing.Point(23, 223);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(117, 23);
             this.btnAddQuestion.TabIndex = 7;
@@ -187,14 +188,15 @@
             this.btnAddQuestion.UseVisualStyleBackColor = true;
             this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
-            // button2
+            // btnFinishExam
             // 
-            this.button2.Location = new System.Drawing.Point(405, 576);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Finish Exam";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnFinishExam.Location = new System.Drawing.Point(405, 576);
+            this.btnFinishExam.Name = "btnFinishExam";
+            this.btnFinishExam.Size = new System.Drawing.Size(117, 23);
+            this.btnFinishExam.TabIndex = 8;
+            this.btnFinishExam.Text = "Finish Exam";
+            this.btnFinishExam.UseVisualStyleBackColor = true;
+            this.btnFinishExam.Click += new System.EventHandler(this.btnFinishExam_Click);
             // 
             // lboxQuestions
             // 
@@ -205,25 +207,24 @@
             this.lboxQuestions.TabIndex = 9;
             this.lboxQuestions.SelectedIndexChanged += new System.EventHandler(this.lboxQuestions_SelectedIndexChanged);
             // 
-            // btnSaveQuestion
+            // btnDeleteQuestion
             // 
-            this.btnSaveQuestion.Location = new System.Drawing.Point(345, 74);
-            this.btnSaveQuestion.Name = "btnSaveQuestion";
-            this.btnSaveQuestion.Size = new System.Drawing.Size(117, 23);
-            this.btnSaveQuestion.TabIndex = 10;
-            this.btnSaveQuestion.Text = "Save Question";
-            this.btnSaveQuestion.UseVisualStyleBackColor = true;
-            this.btnSaveQuestion.Click += new System.EventHandler(this.btnSaveQuestion_Click);
+            this.btnDeleteQuestion.Location = new System.Drawing.Point(345, 52);
+            this.btnDeleteQuestion.Name = "btnDeleteQuestion";
+            this.btnDeleteQuestion.Size = new System.Drawing.Size(117, 23);
+            this.btnDeleteQuestion.TabIndex = 10;
+            this.btnDeleteQuestion.Text = "Delete Question";
+            this.btnDeleteQuestion.UseVisualStyleBackColor = true;
+            this.btnDeleteQuestion.Click += new System.EventHandler(this.btnSaveQuestion_Click);
             // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 607);
-            this.Controls.Add(this.btnSaveQuestion);
+            this.Controls.Add(this.btnDeleteQuestion);
             this.Controls.Add(this.lboxQuestions);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnAddQuestion);
+            this.Controls.Add(this.btnFinishExam);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblExamOnCreate);
             this.Name = "QuestionForm";
@@ -252,8 +253,8 @@
         private System.Windows.Forms.TextBox txtA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddQuestion;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFinishExam;
         private System.Windows.Forms.ListBox lboxQuestions;
-        private System.Windows.Forms.Button btnSaveQuestion;
+        private System.Windows.Forms.Button btnDeleteQuestion;
     }
 }

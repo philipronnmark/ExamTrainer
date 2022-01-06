@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lboxExams = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPlayExam = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreateExam = new System.Windows.Forms.Button();
             this.txtExamName = new System.Windows.Forms.TextBox();
@@ -46,14 +46,15 @@
             this.lboxExams.Size = new System.Drawing.Size(337, 212);
             this.lboxExams.TabIndex = 0;
             // 
-            // button1
+            // btnPlayExam
             // 
-            this.button1.Location = new System.Drawing.Point(244, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Play Exam";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPlayExam.Location = new System.Drawing.Point(244, 292);
+            this.btnPlayExam.Name = "btnPlayExam";
+            this.btnPlayExam.Size = new System.Drawing.Size(105, 38);
+            this.btnPlayExam.TabIndex = 1;
+            this.btnPlayExam.Text = "Play Exam";
+            this.btnPlayExam.UseVisualStyleBackColor = true;
+            this.btnPlayExam.Click += new System.EventHandler(this.btnPlayExam_Click);
             // 
             // label1
             // 
@@ -121,7 +122,7 @@
             this.Controls.Add(this.txtExamName);
             this.Controls.Add(this.btnCreateExam);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPlayExam);
             this.Controls.Add(this.lboxExams);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -134,7 +135,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox lboxExams;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPlayExam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCreateExam;
         private System.Windows.Forms.TextBox txtExamName;

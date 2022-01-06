@@ -39,6 +39,11 @@ namespace ExamTrainer
 
         }
 
+        public void removeQuestion(ExamQuestion q)
+        {
+            examQuestions.Remove(q);
+        }
+
         public override string ToString()
         {
             

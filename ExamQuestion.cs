@@ -25,6 +25,8 @@ namespace ExamTrainer
 
         }
 
+        
+
         public string[] getAlternatives()
         {
             return alternatives;

@@ -105,7 +105,12 @@ namespace ExamTrainer
 
         private void btnSaveQuestion_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnFinishExam_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
