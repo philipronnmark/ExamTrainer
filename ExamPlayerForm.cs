@@ -1,4 +1,5 @@
-﻿using System;
+﻿///Philip Rönnmark 990513-4392 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,12 @@ using System.Windows.Forms;
 
 namespace ExamTrainer
 {
+    /// <summary>
+    /// Plays an exam.
+    /// Answer questions by selecting a radiobutton then clicking check answer.
+    /// If you are wrong, another remaining question will be selected.
+    /// When a question has been answered correctly it will be removed from the remaining questions.
+    /// </summary>
     public partial class ExamPlayerForm : Form
     {
         private Exam exam;
@@ -20,22 +27,30 @@ namespace ExamTrainer
         public ExamPlayerForm()
         {
             InitializeComponent();
+            
         }
 
         public ExamPlayerForm(object chosenExam) : this()
         {
             exam = (Exam)chosenExam;
+            this.Text = "Playing: " + exam.getExamName();
             questions = (ArrayList)exam.getQuestions().Clone();
             updateNumOfQuestions();
             selectRandomQuestion();
 
         }
 
+        /// <summary>
+        /// Updates remaining questions, E.g when a question been answerd correctly then it will update
+        /// </summary>
         private void updateNumOfQuestions()
         {
             lblNumOfQuestions.Text = questions.Count.ToString();
         }
 
+        /// <summary>
+        /// Selects a random question based on remaining questions left
+        /// </summary>
         private void selectRandomQuestion()
         {
             if (questions.Count > 0)
@@ -51,6 +66,9 @@ namespace ExamTrainer
             }
         }
 
+        /// <summary>
+        /// Displays the selected question and its alternatives
+        /// </summary>
         private void displayQuestion()
         {
             //Display question
@@ -64,6 +82,11 @@ namespace ExamTrainer
 
         }
 
+        /// <summary>
+        /// Checks if answer is correct
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCheckAnswer_Click(object sender, EventArgs e)
         {
             if(isAnswerCorrect() == true)
@@ -81,6 +104,10 @@ namespace ExamTrainer
             }
         }
 
+        /// <summary>
+        /// Checks is answer is correct
+        /// </summary>
+        /// <returns></returns>
         private bool isAnswerCorrect()
         {
             ABCD ans = eq.getAnswer(); //Convert enum to index

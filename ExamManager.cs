@@ -13,8 +13,44 @@ namespace ExamTrainer
 
         public void addExam(Exam e)
         {
+            foreach (Exam ex in exams)
+            {
+                if (e.getExamName() == ex.getExamName())
+                {
+                    return;
+                }
+            }
             exams.Add(e);
 
+        }
+
+        public bool checkIfExamAlreadyExists(string examName)
+        {
+            foreach(Exam ex in exams)
+            {
+                if(ex.getExamName() == examName)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Exam findExam(string examName)
+        {
+            foreach (Exam ex in exams)
+            {
+                if (ex.getExamName() == examName)
+                {
+                    return ex;
+                }
+            }
+            return null;
+        }
+
+        public void deleteExam(Exam e)
+        {
+            exams.Remove(e);
         }
 
         public ArrayList GetExams()

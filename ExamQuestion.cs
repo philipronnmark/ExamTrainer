@@ -24,8 +24,21 @@ namespace ExamTrainer
             return question;
 
         }
-
         
+        public void setQuestion(string q)
+        {
+            question = q;
+        }
+
+        public void setAlternatives(string[] alts)
+        {
+            alternatives = alts;
+        }
+
+        public void setAnswer(ABCD ans)
+        {
+            answer = ans;
+        }
 
         public string[] getAlternatives()
         {

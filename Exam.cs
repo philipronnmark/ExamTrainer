@@ -35,7 +35,16 @@ namespace ExamTrainer
 
         public void addQuestion(ExamQuestion q)
         {
+            foreach(ExamQuestion eq in examQuestions)
+            {
+                if(eq.getQuestion() == q.getQuestion())
+                {
+                    return;
+                }
+            }
+
             examQuestions.Add(q);
+            
 
         }
 
@@ -47,7 +56,7 @@ namespace ExamTrainer
         public override string ToString()
         {
             
-            return String.Format("Name: " + examName + " Num of questions: " + examQuestions.Count);
+            return String.Format("" + examName + "  |   Questions: " + examQuestions.Count);
         }
 
     }
